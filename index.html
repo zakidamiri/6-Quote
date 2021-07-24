@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>6-quote a day</title>
+		<link rel="stylesheet" href="style.css">	
+
+
+	</head>
+	
+	<body onload="startTime()">
+	
+		<header>
+			<a href="#" class="logo"><span>Q</span>oute</a>
+			<ul class="navigation">
+				<li><a onclick="submit()" >SUBMIT YOUR QUOTE</a></li>
+				<li><a onclick="about()">ABOUT</a></li>
+	
+
+
+			</ul>
+		</header>
+
+		<section class="banner">
+			<div class="content">
+				<div id="txt"></div>
+				<h2>WELCOME TO <span>Q</span> - A DAY</h2>
+				<p>THIS WEB WILL DISPLAY YOU A QUOTE RELATED TO <span>L</span>IFE, <span>L</span>OVE, <span>P</span>EOPLE AND SO MANY MORE<br></p>
+				<br>
+				<br>
+				<p>CLICK BUTTON BELOW TO OPEN A QUOTE</p>
+				
+				<br>
+			
+				<button class="btn" id="open-popup1">1</button>
+				<button class="btn" id="open-popup2">2</button>
+				<button class="btn" id="open-popup3">3</button>
+				
+				<button class="btn" id="open-popup4">4</button>
+				<button class="btn" id="open-popup5">5</button>
+				<button class="btn" id="open-popup6">6</button>
+				
+			</div>
+
+			
+		</section>
+		
+
+
+			<div id="footer">
+		
+				<h3>&copy; ZakiDamiri</h3>
+				<p>for educational purpose only</p>
+				
+	
+			</div>
+
+		
+		
+		<div class="popup">
+		  <div class="popup-container">
+			<h1 id="demo"></h1>
+			<p class="try" id="quote"></p>	
+			
+			<button class="popup-close" >CLOSE</button>			
+			
+		  </div>
+		</div>
+	
+	<script>
+			var d = new Date();
+			var weekday = new Array(7);
+			weekday[0] = "Sunday";
+			weekday[1] = "Monday";
+			weekday[2] = "Tuesday";
+			weekday[3] = "Wednesday";
+			weekday[4] = "Thursday";
+			weekday[5] = "Friday";
+			weekday[6] = "Saturday";
+
+			var n = weekday[d.getDay()];
+			document.getElementById("demo").innerHTML = n;
+		
+		
+			function startTime() {
+			  const today = new Date();
+			  let h = today.getHours();
+			  let m = today.getMinutes();
+			  let s = today.getSeconds();
+			  m = checkTime(m);
+			  s = checkTime(s);
+			  document.getElementById('txt').innerHTML =  h + ":" + m ;
+			  setTimeout(startTime, 1000);
+			}
+
+			function checkTime(i) {
+			  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			  return i;
+			}
+	
+
+
+		
+				
+			document.querySelector("#open-popup1").addEventListener("click",function(){
+			  document.querySelector(".popup").classList.add("active");
+			  
+			  var q = "Love yourself first and everything else falls into line. You really have to love yourself to get anything done in this world." + "<br/><br/>" + "-Lucille Ball";
+			  document.getElementById('quote').innerHTML = q;
+			});
+			
+			document.querySelector("#open-popup2").addEventListener("click",function(){
+			  document.querySelector(".popup").classList.add("active");
+			  
+			  var q = "Self-love seems so often unrequited." + "<br/><br/>" + "- Anthony Powell";
+			  document.getElementById('quote').innerHTML = q;
+			});
+			
+			document.querySelector("#open-popup3").addEventListener("click",function(){
+			  document.querySelector(".popup").classList.add("active");
+			  
+			  var q = "To fall in love with yourself is the first secret to happiness." + "<br/><br/>" + "-Robert Morely";
+			  document.getElementById('quote').innerHTML = q;
+			});
+			
+			document.querySelector("#open-popup4").addEventListener("click",function(){
+			  document.querySelector(".popup").classList.add("active");
+			  
+			  var q = "If you aren't good at loving yourself, you will have a difficult time loving anyone, since you'll resent the time and energy you give another person that you aren't even giving to yourself." + "<br/><br/>" + "-Barbara De Angelis";
+			  document.getElementById('quote').innerHTML = q;
+			});
+			
+			document.querySelector("#open-popup5").addEventListener("click",function(){
+			  document.querySelector(".popup").classList.add("active");
+			  
+			  var q = "To fall in love with yourself is the first secret to happiness." + "<br/><br/>" + "-Robert Morely";
+			  document.getElementById('quote').innerHTML = q;
+			});
+			
+			document.querySelector("#open-popup6").addEventListener("click",function(){
+			  document.querySelector(".popup").classList.add("active");
+			  
+			  var q = "If you can learn to love yourself and all the flaws, you can love other people so much better. And that makes you so happy." + "<br/><br/>" + "-Kristin Chenoweth";
+			  document.getElementById('quote').innerHTML = q;
+			});
+
+
+
+
+			document.querySelector(".popup .popup-container .popup-close").addEventListener("click",function(){
+				document.querySelector(".popup").classList.remove("active");
+			});			
+				
+			
+			function submit(){
+				alert('THIS FUNCTION IS NOT AVAILABLE ');
+			}
+			function about(){
+				alert('THIS FUNCTION IS NOT AVAILABLE ');
+			}
+
+	</script>
+	
+	</body>
+
+
+</html>
+
+
+
+
+
+
+
+
