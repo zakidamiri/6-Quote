@@ -58,6 +58,15 @@
 			
 		  </div>
 		</div>
+			<div class="popup-about">
+		  <div class="popup-container2">
+			<h1>ABOUT</h1>
+			<p class="try2" id="quote2"></p>	
+			
+			<button class="popup-close2" >CLOSE</button>			
+			
+		  </div>
+		</div>
 	
 	<script>
 			var d = new Date();
@@ -97,7 +106,7 @@
 			document.querySelector("#open-popup1").addEventListener("click",function(){
 			  document.querySelector(".popup").classList.add("active");
 			  
-			  var q = "Love yourself first and everything else falls into line. You really have to love yourself to get anything done in this world." + "<br/><br/>" + "-Lucille zaki Ball";
+			  var q = "Love yourself first and everything else falls into line. You really have to love yourself to get anything done in this world." + "<br/><br/>" + "-Lucille Ball";
 			  document.getElementById('quote').innerHTML = q;
 			});
 			
@@ -147,9 +156,19 @@
 			function submit(){
 				alert('THIS FUNCTION IS NOT AVAILABLE ');
 			}
+			
 			function about(){
-				alert('THIS FUNCTION IS NOT AVAILABLE ');
+			
+			  document.querySelector(".popup-about").classList.add("active");
+			  
+			  var q = "Created by Zaki Damiri. this web is for educational(fun) purpose only. ";
+			  document.getElementById('quote2').innerHTML = q;
+	
+	
 			}
+			document.querySelector(".popup-about .popup-container2 .popup-close2").addEventListener("click",function(){
+				document.querySelector(".popup-about").classList.remove("active");
+			});	
 
 	</script>
 	
